@@ -1,0 +1,28 @@
+{
+  "name": "jsincss-protocol-sniffer",
+  "version": "0.0.1",
+  "description": "A protocol sniffer plugin for jsincss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomhodgins/jsincss-protocol-sniffer.git"
+  },
+  "keywords": [
+    "jsincss",
+    "protocol",
+    "sniffer",
+    "file",
+    "http",
+    "https",
+    "css"
+  ],
+  "author": "Tommy Hodgins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomhodgins/jsincss-protocol-sniffer/issues"
+  },
+  "homepage": "https://github.com/tomhodgins/jsincss-protocol-sniffer#readme"
+}
