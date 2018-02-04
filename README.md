@@ -18,7 +18,7 @@ Another option that works for building or testing, that isn't ideal for producti
 
 ```html
 <script type=module>
-  import protocol-sniffer from 'https://unpkg.com/jsincss-protocol-sniffer/index.js'
+  import protocol from 'https://unpkg.com/jsincss-protocol-sniffer/index.js'
 </script>
 ```
 
