@@ -62,40 +62,7 @@ This example will use the `jsincss` plugin to load a JS-in-CSS stylesheet making
   import jsincss from 'https://unpkg.com/jsincss/index.js'
   import protocol from 'https://unpkg.com/jsincss-protocol-sniffer/index.js'
 
-  jsincss(() => {
-
-    return `
-
-      ${protocol(['file'],`
-        body:before {
-          content: "You're on FILE://";
-        }
-      `)}
-      ${protocol(['http'],`
-        body:before {
-          content: "You're on HTTP://"
-        }
-      `)}
-      ${protocol(['https'],`
-        body:before {
-          content: "You're on HTTPS://"
-        }
-      `)}
-
-    `
-
-  })
-</script>
-```
-
-It's also possible to write your stylesheets as a separate JavaScript module like this, where you import any helper plugins at the top of the stylesheet:
-
-```js
-import protocol from 'http://unpkg.com/jsincss-protocol-sniffer/index.js'
-
-export default () => {
-
-  return `
+  jsincss(() => `
 
     ${protocol(['file'],`
       body:before {
@@ -113,9 +80,34 @@ export default () => {
       }
     `)}
 
-  `
+  `)
+</script>
+```
 
-}
+It's also possible to write your stylesheets as a separate JavaScript module like this, where you import any helper plugins at the top of the stylesheet:
+
+```js
+import protocol from 'https://unpkg.com/jsincss-protocol-sniffer/index.js'
+
+export default () => `
+
+  ${protocol(['file'],`
+    body:before {
+      content: "You're on FILE://";
+    }
+  `)}
+  ${protocol(['http'],`
+    body:before {
+      content: "You're on HTTP://"
+    }
+  `)}
+  ${protocol(['https'],`
+    body:before {
+      content: "You're on HTTPS://"
+    }
+  `)}
+
+`
 ```
 
 And then import both the `jsincss` plugin and the stylesheet into your code and run them like this, suppling any `selector` or `events` list the `jsincss` plugin might need to apply the stylesheet only the the element(s) and event(s) you require, depending on what you're doing:
