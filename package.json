@@ -1,6 +1,6 @@
 {
   "name": "jsincss-protocol-sniffer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A protocol sniffer plugin for jsincss",
   "main": "index.js",
   "scripts": {
