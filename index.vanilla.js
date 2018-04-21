@@ -1,4 +1,4 @@
-module.exports = (protocols, stylesheet) => {
+export default (protocols, stylesheet) => {
 
   return protocols.some(test => location.protocol === `${test}:`)
           ? stylesheet
